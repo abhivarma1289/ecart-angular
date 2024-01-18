@@ -1,0 +1,12 @@
+<div class="ekart--search--product">
+    <!-- one way using property and event binding -->
+    <!-- <input class="ekart-search-product-input" [value]="searchtext" (input)="updatesearchtext($event)" > -->
+
+    <!-- antother way using ngModel two ay binding -->
+    <input class="ekart-search-product-input" [(ngModel)]="searchtext" >
+     
+    <!-- <button class="btn btn-search" [disabled]="!searchtext" >Search</button> -->
+    <button [ngClass]="{'btn':true, 'btn-search':searchtext  ,'btn-search-disabled' :!searchtext}" [disabled]="!searchtext" >Search</button>
+</div>
+<div class="ekart-search-result-for">
+    <p *ngIf="searchtext!=''"><strong>Search result for:</strong> {{searchtext}}</p></div>
