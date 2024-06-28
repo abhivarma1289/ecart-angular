@@ -1,0 +1,68 @@
+<div class="main-div" [ngStyle]="{ 'background-color': searchtext }">
+  <h1>assignment2</h1>
+  <strong [style.color]="searchtext" class="event"
+    >Evenet :{{ displaytext }}
+  </strong>
+  <br /><br />
+  <!-- <div [style.background-color]="searchtext"> -->
+  <div>
+    <div class="form-outline" data-mdb-input-init>
+      <input
+        placeholder="search here what color do you want ??"
+        (input)="onSearchTextChanged($event)"
+        type="search"
+        id="form1"
+        class="form-control"
+      />
+    </div>
+    <br />
+    <!-- <input class="input-textform" placeholder="search here what color do you want ??"   (input)="onSearchTextChanged($event)"> -->
+    <p><strong>Colour you are searching for :</strong> {{ searchtext }}</p>
+    <button (click)="onclickred()" class="btn btn-outline-danger">
+      click here to change colorred
+    </button>
+    <br /><br />
+    <button
+      (click)="onclickgreen()"
+      type="button"
+      class="btn btn-outline-success"
+    >
+      click here to change colorgreen
+    </button>
+  </div><br><br>
+  <div>
+    <h1>Form details</h1><br>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" id="form3Example1" class="form-control" [(ngModel)]="firstName" />
+            <label class="form-label" for="form3Example1">First name</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="form-outline">
+            <input type="text" id="form3Example2" class="form-control" [(ngModel)]="lastName"  />
+            <label class="form-label" for="form3Example2">Last name</label>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="form3Example3" class="form-control"  [(ngModel)]="email"/>
+        <label class="form-label" for="form3Example3">Email address</label>
+      </div>
+    
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="form3Example4" class="form-control" [(ngModel)]="password" />
+        <label class="form-label" for="form3Example4">Password</label>
+      </div>
+    
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4" (click)="formdetails()">
+        show Alert
+      </button>
+    </div>
+  </div>
+

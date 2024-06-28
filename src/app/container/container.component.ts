@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -44,4 +45,13 @@ cartvalue:number = 0;
   // Rename 'string' to 'stringList' or any other meaningful name
  stringList: string[] = ['abhi', 'varma', 'dongari'];
 
+ searchText:string = '';
+ 
+ setSerachText(text:string){
+  this.searchText = text;
+ }
+
+
+
+ @ViewChild(ProductListComponent) ProductListComponent: ProductListComponent ;
 }

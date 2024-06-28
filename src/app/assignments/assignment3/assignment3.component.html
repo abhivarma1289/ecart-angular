@@ -1,0 +1,33 @@
+<div class="assignment3">
+    <div class="assignment3__size">
+        <p class="assignment3__text" [style.font-size]="fontsize">assignment3 works!</p>
+    <select #font class="select" (click)="fontSize(font.value)">
+        <option [value]="s1" >25px</option>
+        <option [value]="s2">50px</option>
+        <option [value]="s2">75px</option>
+        <option [value]="s3">100px</option>
+      </select>
+    </div>
+      <div class="form-outline w-50 mb-4 assignment3__input">
+        <label class="form-label assignment3__label" for="textAreaExample5">Add Note below :</label>
+        <textarea class="form-control assignment3__textarea" id="textAreaExample5" #Note rows="3"></textarea>
+        <button type="button" class="btn btn-outline-success" (click)="addnote(Note.value)">+ ADD</button>
+
+        <div style="color: red;">
+            <ul>
+                <li>
+            {{note}}
+
+                </li>
+            </ul>
+        </div>
+      </div>
+</div>
+<!-- <div class="grid-stack">
+  <div class="grid-stack-item">
+    <div class="grid-stack-item-content">Item 1</div>
+  </div>
+  <div class="grid-stack-item" gs-w="2">
+    <div class="grid-stack-item-content">Item 2 wider</div>
+  </div>
+</div> -->

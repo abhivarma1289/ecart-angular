@@ -1,0 +1,42 @@
+.assignment3{
+    height: auto;
+    margin: 50px 0px;
+    border: 6px solid rgb(119, 241, 143);
+    background-color: rgb(10, 10, 9);
+    border-radius: 20px;
+    height: 500px;
+    &__text{
+        color: rgb(100, 249, 80);
+    }
+    &__size{
+        display: flex;
+        flex-direction: column;
+        border: 3px solid rgb(119, 241, 143);
+        width: auto;
+        margin: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    &__size select{
+        margin-bottom: 20px ;
+        width: 110px;
+        height: 40px;
+        background-color: rgb(224, 109, 186);
+        border-radius: 10px;
+        border-color: rgb(32, 238, 32);
+    }
+    &__input{
+        margin: 20px;
+    }
+   &__textarea{
+    margin-left: 45%;
+   }
+   &__label{
+    color: rgb(101, 235, 134);
+   }
+    &__input button{
+       margin-top: 10px;
+       margin-left: 87%;
+        border: 3px solid rgb(119, 241, 143);
+    }
+}

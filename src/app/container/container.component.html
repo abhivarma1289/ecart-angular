@@ -1,7 +1,8 @@
 
 <div >
-    <app-search></app-search>
-    <product-list></product-list>
+    <app-search (SearchTextChanged)="setSerachText($event)"></app-search>
+    <product-list [searchText]="searchText" #ProductListComponent></product-list>
+    <app-product-detail *ngIf="ProductListComponent.selectedproduct" [productListComp]="ProductListComponent"></app-product-detail>
 </div>
     
 <!-- <div *ngFor="let item of stringList">

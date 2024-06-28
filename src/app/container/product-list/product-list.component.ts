@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { product } from 'src/app/models/product';
 @Component({
   selector: 'product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent {
+  selectedproduct: product;
   products = [
     {
       id: 1,
@@ -534,12 +535,18 @@ export class ProductListComponent {
   ];
   totalProductCount =this.products.length;
   totalproductInStock=this.products.filter(p=>p.is_in_inventory === true).length;
-  totalproductOutOfStock=this.totalProductCount-this.totalproductInStock;
+  // totalproductOutOfStock=this.totalProductCount-this.totalproductInStock;
+  totalproductOutOfStock=this.products.filter(p=>p.is_in_inventory === false).length;
 
-  selectedFilterRadioButton:string = 'all';
 
-  onFilterchange(value : any) {
+  @Input()
+  searchText :string = '';
+
+
+  selectedFilterRadioButton: string = "all";
+
+  onFilterChanged(value: string){
     console.log(value);
-    this.selectedFilterRadioButton = value; 
+    this.selectedFilterRadioButton=value;
   }
 }
